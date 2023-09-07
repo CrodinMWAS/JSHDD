@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDD LifeTime Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="bigBox">
+        <div id="firstBox">
+            <label for="dropdown1">Kapacitás:</label>
+            <input type="number" id="capacityInput">
+            <select name="dropdown1" id="cbCapacity">
+                <option value="1">Mb</option>
+                <option value="2">Gb</option>
+                <option value="3">Tb</option>
+            </select>
+        </div>
+
+        <div id="secBox">
+            <label for="dropdown2">Átviteli Sebesség:</label>
+            <input type="range" id="range" min="10" max="5000" step="10" oninput="rangeshower.innerHTML = range.value" value="10">
+            <label for="" id="rangeshower">10</label>
+            <select name="dropdown2" id="cbSpeed">
+                <option value="1">Mbp/s</option>
+                <option value="2">KBp/s</option>
+                <option value="3">MBp/s</option>
+                <option value="4">GBp/s</option>
+            </select>
+        </div>
+        
+        <button onclick="Calculate()" id="bigButton">Számol</button>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
